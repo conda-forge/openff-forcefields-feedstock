@@ -132,4 +132,5 @@ Feedstock Maintainers
 * [@jaimergp](https://github.com/jaimergp/)
 * [@jchodera](https://github.com/jchodera/)
 * [@mattwthompson](https://github.com/mattwthompson/)
+* [@simonboothroyd](https://github.com/simonboothroyd/)
 
