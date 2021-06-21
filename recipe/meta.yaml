@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/openforcefield/openff-forcefields/archive/{{ version | replace("a", "-alpha.") }}.tar.gz
+  url: https://github.com/openforcefield/openff-forcefields/archive/{{ version | replace("a", "-alpha.") | replace("rc", "-rc.") }}.tar.gz
   sha256: 23e74eadd3b33434992b5b1ad149b8ac4fc70c2e95e5e3bf76ef2066cc08c15d
 
 build:
