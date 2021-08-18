@@ -1,5 +1,5 @@
 {% set name = "openff-forcefields" %}
-{% set version = "2.0.0rc.2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-forcefields/archive/{{ version | replace("a", "-alpha.") | replace("rc", "-rc") }}.tar.gz
-  sha256: 19bd6ad823fe7375ecef38d87d9a6f2553c81186e5fd1491a2d72134033c7d90
+  sha256: c8de5a791770819b4982a4c5eaaeb9ef5702119546c3945871832cc079270691
 
 build:
   noarch: python
