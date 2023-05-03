@@ -9,7 +9,7 @@ package:
 source:
   url: https://github.com/openforcefield/openff-forcefields/archive/{{ version | replace("a", "-alpha.") | replace("rc", "-rc") }}.tar.gz
   sha256: f9b82230dd788ab2a7d56dd635625957515682f58dd084075bf6c64667a539cd
-
+ 
 build:
   noarch: python
   number: 0
