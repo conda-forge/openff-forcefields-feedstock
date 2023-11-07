@@ -1,6 +1,6 @@
 {% set name = "openff-forcefields" %}
 
-{% set version = "2023.08.0" %}
+{% set version = "2023.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-forcefields/archive/{{ version | replace("a", "-alpha.") | replace("rc", "-rc") }}.tar.gz
-  sha256: f1d0bb2b6d3c99161b452f823118f644f194bb303ad32a25af712147dd099573
+  sha256: 714b6eb3718cf65b88cfc81640fb0edcad75d78432bbc42c345a75757b9165ae
  
 build:
   noarch: python
@@ -20,7 +20,7 @@ requirements:
     - python
     - pip
   run:
-    - python >=3.6
+    - python >=3.9
     - setuptools
   run_constrained:
     - openforcefields ==9999999999
