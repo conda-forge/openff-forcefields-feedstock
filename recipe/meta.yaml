@@ -27,6 +27,7 @@ requirements:
 test:
   requires:
     - openff-toolkit-base
+    - rdkit  # a cheminformatics toolkit is needed for parsing OFFXMLs
   imports:
     - openforcefields
   files:
