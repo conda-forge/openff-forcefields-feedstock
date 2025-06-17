@@ -7,20 +7,20 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-forcefields/archive/{{ version }}.tar.gz
-  sha256: cd234795fc85de4ea1f3ec538d2a9740873af158abc1e12c0c8f3a906b29ba34
+  sha256: 7f8332e7d0ca3af6e23939c782cc47d6e3bb71c6e1138a8db678fc8d01b1a5ca
  
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - setuptools
   run_constrained:
     - openforcefields ==9999999999
@@ -28,6 +28,7 @@ test:
   requires:
     - openff-toolkit-base
     - rdkit  # a cheminformatics toolkit is needed for parsing OFFXMLs
+    - python {{ python_min }}
   imports:
     - openforcefields
   files:
