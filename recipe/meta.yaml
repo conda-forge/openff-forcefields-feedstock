@@ -11,7 +11,7 @@ source:
  
 build:
   noarch: python
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
 
 requirements:
@@ -27,7 +27,6 @@ requirements:
 test:
   requires:
     - openff-toolkit-base
-    - rdkit  # a cheminformatics toolkit is needed for parsing OFFXMLs
     - python {{ python_min }}
   imports:
     - openforcefields
