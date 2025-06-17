@@ -27,6 +27,7 @@ requirements:
 test:
   requires:
     - openff-toolkit-base
+    - rdkit
     - python {{ python_min }}
   imports:
     - openforcefields
