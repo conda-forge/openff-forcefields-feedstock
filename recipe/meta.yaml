@@ -1,5 +1,5 @@
 {% set name = "openff-forcefields" %}
-{% set version = "2026.01.0" %}
+{% set version = "2026.09.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,18 +7,19 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-forcefields/archive/{{ version }}.tar.gz
-  sha256: 5289bcfcd9371299152e3f8372447d4ca237d631d77326e85a1a814ebc8efdc5
+  sha256: b054ca8e337c03b72df9338d7ae5b38170de46107c8295a0aae56ec153cc0c98
  
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv --no-deps"
+  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
     - setuptools
+    - setuptools-scm
   run:
     - python >={{ python_min }}
     - setuptools
